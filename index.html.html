@@ -238,6 +238,7 @@
   }
   .accent-teal { background: linear-gradient(90deg, var(--accent), #3dd9b0, var(--accent2)); }
   .accent-blue { background: linear-gradient(90deg, var(--accent2), #7b9fff, var(--accent)); }
+  .accent-green { background: linear-gradient(90deg, #4ade80, #22c55e, #16a34a); }
 
   .project-body {
     padding: 1.75rem 1.75rem 0;
@@ -379,6 +380,8 @@
   .tech-recharts { background: rgba(91,124,255,0.1);  color: #7b9fff; border: 1px solid rgba(91,124,255,0.2); }
   .tech-js       { background: rgba(247,223,30,0.1);  color: #f7df1e; border: 1px solid rgba(247,223,30,0.18); }
   .tech-dlib     { background: rgba(255,138,101,0.1); color: #ff8a65; border: 1px solid rgba(255,138,101,0.2); }
+  .tech-streamlit{ background: rgba(255,75,75,0.1);   color: #ff4b4b; border: 1px solid rgba(255,75,75,0.2); }
+  .tech-pandas   { background: rgba(78,240,196,0.1);  color: var(--accent); border: 1px solid rgba(78,240,196,0.2); }
 
   /* Demo link */
   .demo-link {
@@ -632,11 +635,11 @@
 
       <div class="project-footer">
         <div class="tech-stack">
-          <span class="tech-badge tech-react"><span class="tech-badge-icon"></span>React.js</span>
-          <span class="tech-badge tech-recharts"><span class="tech-badge-icon"></span>Recharts</span>
-          <span class="tech-badge tech-python"><span class="tech-badge-icon"></span>Python</span>
-          <span class="tech-badge tech-flask"><span class="tech-badge-icon"></span>Flask</span>
-          <span class="tech-badge tech-opencv"><span class="tech-badge-icon"></span>OpenCV</span>
+          <span class="tech-badge tech-react">React.js</span>
+          <span class="tech-badge tech-recharts">Recharts</span>
+          <span class="tech-badge tech-python">Python</span>
+          <span class="tech-badge tech-flask">Flask</span>
+          <span class="tech-badge tech-opencv">OpenCV</span>
         </div>
         <a href="https://synapset-s6af.vercel.app/stress-buster" target="_blank" class="demo-link">
           Live Demo
@@ -645,52 +648,55 @@
       </div>
     </div>
 
-    <!-- Replace the "Resume Converter" project card with the following "Smart Crop Advisory System" code -->
-
-    <!-- PROJECT 2: Smart Crop Advisory System -->
     <!-- PROJECT 2: Smart Crop Advisory System -->
     <div class="project-card reveal" style="transition-delay:0.12s">
-      <div class="project-card-accent accent-blue"></div>
+      <div class="project-card-accent accent-green"></div>
       <div class="project-body">
         <div class="project-header">
-          <div class="project-icon" style="background:rgba(91,124,255,0.1);border-color:rgba(91,124,255,0.2)">🚜</div>
+          <div class="project-icon" style="background:rgba(74,222,128,0.08);border-color:rgba(74,222,128,0.2)"></div>
           <div class="project-meta">
-            <div class="project-number" style="color:var(--accent2)">Project 02</div>
+            <div class="project-number" style="color:#4ade80">Project 02</div>
             <div class="project-name">Smart Crop Advisory System</div>
           </div>
         </div>
 
         <p class="project-desc">
-          A data-driven web application developed for the Smart India Hackathon (SIH) to help farmers make informed decisions based on soil, weather, and water availability.
+          A data-driven web application built for Smart India Hackathon (SIH) that helps farmers make informed crop decisions by analysing location, soil type, weather conditions, and water availability — reducing yield loss and financial risk.
         </p>
 
-        <div class="project-section-label" style="color:var(--accent2)">Key Features</div>
+        <div class="project-section-label" style="color:#4ade80">Key Features</div>
         <ul class="feature-list">
-          <li>AI-powered recommendations based on N-P-K levels and pH</li>
-          <li>Real-time weather data integration for accurate forecasting</li>
-          <li>Analyzes location and water availability to suggest high-yield crops</li>
-          <li>User-friendly interface designed for rural accessibility</li>
+          <li>Crop recommendation with match accuracy score</li>
+          <li>Profit estimation and ROI analysis per crop</li>
+          <li>Fertilizer and irrigation planning guidance</li>
+          <li>Pest &amp; disease management and soil health insights</li>
+          <li>Crop rotation planning and market price trend analysis</li>
+          <li>Government schemes information for farmers</li>
+          <li>Bilingual support — English &amp; Telugu</li>
         </ul>
 
-        <div class="smart-trigger" style="background:rgba(78,240,196,0.04);border-color:rgba(78,240,196,0.1)">
-          <span class="smart-trigger-icon"></span>
-          <span><strong style="color:var(--text)">The Mission:</strong> Reducing financial losses by replacing guesswork with data-driven agricultural guidance.</span>
+        <div class="smart-trigger" style="background:rgba(74,222,128,0.04);border-color:rgba(74,222,128,0.15)">
+          <span class="smart-trigger-icon">🚜</span>
+          <span><strong style="color:var(--text)">SIH Problem Statement:</strong> Farmers struggle to select the right crop due to soil variation, unpredictable weather, and lack of reliable agricultural guidance.</span>
         </div>
       </div>
 
       <div class="project-footer">
         <div class="tech-stack">
-          <span class="tech-badge tech-python"><span class="tech-badge-icon">🐍</span>Python</span>
-          <span class="tech-badge tech-flask" style="color:#4ef0c4; border-color:rgba(78,240,196,0.2)"><span class="tech-badge-icon"></span>Streamlit</span>
-          <span class="tech-badge tech-js" style="background:rgba(91,124,255,0.1); color:#7b9fff; border:1px solid rgba(91,124,255,0.2)"><span class="tech-badge-icon"></span>Scikit-Learn</span>
-          <span class="tech-badge tech-recharts"><span class="tech-badge-icon"></span>Pandas</span>
+          <span class="tech-badge tech-python">Python</span>
+          <span class="tech-badge tech-pandas">Pandas</span>
+          <span class="tech-badge tech-streamlit">Streamlit</span>
         </div>
-        <a href="https://smart-crop-advisory-system-raithu-nestham.streamlit.app/" target="_blank" class="demo-link">
+        <a href="https://lnkd.in/gZsKcBJ6" target="_blank" class="demo-link" style="background:#4ade80;color:#080c14">
           Live Demo
           <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg>
         </a>
       </div>
     </div>
+
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
   <div class="contact-glow"></div>
