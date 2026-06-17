@@ -358,72 +358,6 @@ section{padding:6rem 5vw;position:relative;z-index:1}
 .coding-stat strong{color:var(--text);font-weight:600}
 .coding-arrow{font-size:0.75rem;color:var(--muted);margin-top:auto;font-family:var(--mono)}
 
-/* ── CONTENT CREATOR ── */
-#creator{background:var(--bg)}
-.creator-inner{
-  display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;
-}
-.creator-badge{
-  display:inline-flex;align-items:center;gap:0.6rem;
-  font-family:var(--mono);font-size:0.72rem;color:#e1306c;
-  background:rgba(225,48,108,0.08);border:1px solid rgba(225,48,108,0.2);
-  padding:0.4rem 0.9rem;border-radius:100px;margin-bottom:1.5rem;letter-spacing:0.06em;
-}
-.creator-badge .dot{width:6px;height:6px;border-radius:50%;background:#e1306c;animation:ring 2s infinite}
-.creator-title{font-family:'Clash Display',sans-serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:700;line-height:1.1;margin-bottom:1.25rem;letter-spacing:-0.02em}
-.creator-title span{
-  background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-}
-.creator-text{color:var(--muted2);font-size:0.95rem;line-height:1.85;margin-bottom:2rem}
-.creator-stats{display:flex;gap:2rem;flex-wrap:wrap;margin-bottom:2rem}
-.creator-stat .val{font-family:'Clash Display',sans-serif;font-size:1.8rem;font-weight:700;color:var(--text);line-height:1}
-.creator-stat .lbl{font-size:0.75rem;color:var(--muted);margin-top:0.2rem;text-transform:uppercase;letter-spacing:0.05em}
-.insta-btn{
-  display:inline-flex;align-items:center;gap:0.6rem;
-  padding:0.8rem 1.8rem;border-radius:8px;text-decoration:none;
-  font-family:'Clash Display',sans-serif;font-size:0.85rem;font-weight:700;
-  letter-spacing:0.03em;transition:all 0.25s;
-  background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
-  color:#fff;
-}
-.insta-btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(220,39,67,0.4)}
-.insta-card{
-  background:var(--card);border:1px solid var(--border);border-radius:20px;
-  padding:2rem;position:relative;overflow:hidden;
-}
-.insta-card::before{
-  content:'';position:absolute;top:-50px;right:-50px;
-  width:200px;height:200px;border-radius:50%;
-  background:radial-gradient(circle,rgba(225,48,108,0.08) 0%,transparent 70%);
-  pointer-events:none;
-}
-.insta-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem}
-.insta-avatar{
-  width:60px;height:60px;border-radius:50%;
-  background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
-  display:flex;align-items:center;justify-content:center;font-size:1.5rem;
-  flex-shrink:0;
-}
-.insta-name{font-family:'Clash Display',sans-serif;font-weight:700;font-size:1rem;color:var(--text)}
-.insta-username{font-family:var(--mono);font-size:0.75rem;color:#e1306c;margin-top:0.1rem}
-.insta-topics{display:flex;flex-wrap:wrap;gap:0.45rem;margin-bottom:1.25rem}
-.insta-topic{
-  font-family:var(--mono);font-size:0.72rem;
-  padding:0.3rem 0.7rem;border-radius:100px;border:1px solid;
-}
-.it-green{background:rgba(34,197,94,0.08);border-color:rgba(34,197,94,0.2);color:var(--green)}
-.it-gold{background:rgba(245,200,66,0.08);border-color:rgba(245,200,66,0.2);color:var(--gold)}
-.it-blue{background:rgba(96,165,250,0.08);border-color:rgba(96,165,250,0.2);color:var(--blue)}
-.insta-desc{font-size:0.85rem;color:var(--muted2);line-height:1.75;margin-bottom:1.25rem}
-.insta-follow-link{
-  display:inline-flex;align-items:center;gap:0.5rem;
-  font-family:var(--mono);font-size:0.78rem;color:#e1306c;
-  background:rgba(225,48,108,0.08);border:1px solid rgba(225,48,108,0.2);
-  padding:0.5rem 1.1rem;border-radius:7px;text-decoration:none;transition:all 0.2s;
-}
-.insta-follow-link:hover{background:rgba(225,48,108,0.15);transform:translateY(-1px)}
-
 /* ── CONTACT ── */
 #contact{
   text-align:center;padding:8rem 5vw;
@@ -475,7 +409,7 @@ footer{
 .footer-logo{font-family:'Clash Display',sans-serif;font-weight:700;font-size:0.95rem;color:var(--gold)}
 
 /* ══════════════════════════════════
-   RESUME MODAL (all inline, no new tab)
+   RESUME MODAL
 ══════════════════════════════════ */
 .resume-overlay{
   position:fixed;inset:0;z-index:999;
@@ -524,7 +458,6 @@ footer{
 .modal-body::-webkit-scrollbar{width:4px}
 .modal-body::-webkit-scrollbar-thumb{background:rgba(245,200,66,0.2);border-radius:3px}
 
-/* Resume typography */
 .r-name{
   font-family:'Clash Display',sans-serif;font-size:2rem;font-weight:700;
   color:var(--text);letter-spacing:-0.02em;text-align:center;margin-bottom:0.65rem;
@@ -597,7 +530,6 @@ footer{
 /* ── RESPONSIVE ── */
 @media(max-width:900px){
   #about{grid-template-columns:1fr;gap:3rem}
-  .creator-inner{grid-template-columns:1fr;gap:2.5rem}
   .stat-grid{grid-template-columns:repeat(3,1fr)}
 }
 @media(max-width:640px){
@@ -608,6 +540,75 @@ footer{
   .modal-body{padding:1.5rem}
   .r-skills-grid{grid-template-columns:1fr}
 }
+
+/* ── PROJECT PREVIEW IMAGE ── */
+.proj-preview{
+  width:100%;height:180px;overflow:hidden;
+  border-bottom:1px solid var(--border);
+  position:relative;background:var(--card2);
+  display:flex;align-items:center;justify-content:center;
+}
+.proj-preview iframe{
+  width:160%;height:160%;
+  border:none;pointer-events:none;
+  transform:scale(0.625);transform-origin:top left;
+  position:absolute;top:0;left:0;
+}
+.proj-preview-mockup{
+  width:100%;height:100%;
+  display:flex;align-items:center;justify-content:center;
+  flex-direction:column;gap:0.75rem;
+  background:linear-gradient(135deg,#0a1a0d 0%,#061209 100%);
+  position:relative;overflow:hidden;
+}
+.proj-preview-mockup::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 20% 50%,rgba(34,197,94,0.08) 0%,transparent 50%),
+    radial-gradient(circle at 80% 20%,rgba(245,200,66,0.06) 0%,transparent 40%);
+}
+.mockup-browser{
+  width:88%;background:#0d1f10;border-radius:10px;
+  border:1px solid rgba(34,197,94,0.2);overflow:hidden;
+  box-shadow:0 8px 32px rgba(0,0,0,0.6);
+  position:relative;z-index:1;
+}
+.mockup-bar{
+  height:28px;background:#0a1a0d;display:flex;align-items:center;
+  padding:0 10px;gap:6px;border-bottom:1px solid rgba(34,197,94,0.12);
+}
+.mockup-dot{width:8px;height:8px;border-radius:50%}
+.mockup-url{
+  flex:1;margin:0 8px;height:16px;
+  background:rgba(34,197,94,0.08);border-radius:3px;
+  display:flex;align-items:center;padding:0 8px;
+  font-family:var(--mono);font-size:0.6rem;color:rgba(34,197,94,0.5);
+}
+.mockup-content{padding:12px 14px}
+.mockup-hero-text{
+  font-family:'Clash Display',sans-serif;font-size:0.85rem;font-weight:700;
+  color:#22c55e;margin-bottom:4px;
+}
+.mockup-sub{font-size:0.65rem;color:rgba(255,255,255,0.35);margin-bottom:10px}
+.mockup-form{display:flex;flex-direction:column;gap:5px}
+.mockup-input{
+  height:20px;background:rgba(34,197,94,0.06);border:1px solid rgba(34,197,94,0.15);
+  border-radius:4px;padding:0 7px;font-size:0.6rem;color:rgba(255,255,255,0.4);
+  font-family:var(--mono);display:flex;align-items:center;
+}
+.mockup-btn{
+  height:22px;background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.3);
+  border-radius:4px;display:flex;align-items:center;justify-content:center;
+  font-size:0.65rem;color:#22c55e;font-family:'Clash Display',sans-serif;font-weight:700;
+  margin-top:3px;
+}
+.mockup-badge-row{display:flex;gap:5px;margin-top:8px}
+.mockup-badge{
+  padding:2px 7px;border-radius:3px;font-size:0.6rem;font-family:var(--mono);
+}
+.mb-green{background:rgba(34,197,94,0.1);color:#22c55e;border:1px solid rgba(34,197,94,0.2)}
+.mb-gold{background:rgba(245,200,66,0.1);color:var(--gold);border:1px solid rgba(245,200,66,0.2)}
+.mb-blue{background:rgba(96,165,250,0.1);color:var(--blue);border:1px solid rgba(96,165,250,0.2)}
 </style>
 </head>
 <body>
@@ -618,6 +619,7 @@ footer{
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#education">Education</a></li>
+    <li><a href="#projects">Projects</a></li>
     <li><a href="#coding">Coding</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#" class="nav-resume" id="openResumeNav">Resume</a></li>
@@ -754,6 +756,206 @@ footer{
       <div class="t-school">TGSWREIS — Telangana Social Welfare Residential Educational Institutions Society</div>
       <span class="t-score">CGPA: 9.5</span>
     </div>
+  </div>
+</section>
+
+<div class="full-divider"></div>
+
+<!-- ═══════════════════════════════════
+     PROJECTS SECTION  (NEW)
+═══════════════════════════════════ -->
+<section id="projects">
+  <div class="sec-tag reveal">Projects</div>
+  <h2 class="sec-title reveal">Things I've Built.</h2>
+  <p class="reveal" style="color:var(--muted2);max-width:540px;font-size:0.95rem;line-height:1.8;margin-top:0.5rem">
+    Real-world applications where code meets purpose — from AI-powered farming tools to intelligent study systems.
+  </p>
+
+  <div class="projects-grid">
+
+    <!-- ── PROJECT 1: Smart Crop Advisory ── -->
+    <div class="proj-card reveal">
+      <div class="proj-stripe stripe-green"></div>
+
+      <!-- Visual mockup preview -->
+      <div class="proj-preview">
+        <div class="proj-preview-mockup">
+          <div class="mockup-browser">
+            <div class="mockup-bar">
+              <div class="mockup-dot" style="background:#ff5f57"></div>
+              <div class="mockup-dot" style="background:#febc2e"></div>
+              <div class="mockup-dot" style="background:#28c840"></div>
+              <div class="mockup-url">crop-advisory-one.vercel.app</div>
+            </div>
+            <div class="mockup-content">
+              <div class="mockup-hero-text">🌾 Mana Raithu Nestam</div>
+              <div class="mockup-sub">Smart Crop Advisory Platform for Telangana Farmers</div>
+              <div class="mockup-form">
+                <div class="mockup-input">🌡️  Temperature: 28°C</div>
+                <div class="mockup-input">🌧️  Previous crop: Rice</div>
+                <div class="mockup-input">🌱  Soil type: Black cotton</div>
+                <div class="mockup-btn">Get Crop Recommendation →</div>
+              </div>
+              <div class="mockup-badge-row">
+                <span class="mockup-badge mb-green">✓ Cotton suggested</span>
+                <span class="mockup-badge mb-gold">Govt. scheme linked</span>
+                <span class="mockup-badge mb-blue">Telugu UI</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-body">
+        <div class="proj-num">01 · FEATURED PROJECT</div>
+        <div class="proj-icon">🌾</div>
+        <div class="proj-name">Mana Raithu Nestam — Smart Crop Advisory</div>
+        <p class="proj-desc">
+          An AI-powered farming platform built for Telangana farmers. It recommends the best crop to grow based on local temperature, previous crop rotation, soil conditions, and other agricultural parameters — helping farmers make data-driven decisions and reduce crop failure.
+        </p>
+        <ul class="feat-list">
+          <li>Crop recommendation engine using temperature, rainfall &amp; previous crop data</li>
+          <li>Integrated government scheme information relevant to the suggested crop</li>
+          <li>Bilingual support — accessible in Telugu for local farming communities</li>
+          <li>Simple, mobile-friendly UI designed for farmers with low tech literacy</li>
+          <li>Deployed live on Vercel — accessible from any device</li>
+        </ul>
+        <div class="achievement-badge">
+          🏆 Presented at Ideathon 3.0 — GRIET CSI Student Branch
+        </div>
+      </div>
+
+      <div class="proj-footer">
+        <div class="tech-row">
+          <span class="tbadge tb-js">JavaScript</span>
+          <span class="tbadge tb-re">React</span>
+          <span class="tbadge tb-py">Python</span>
+          <span class="tbadge tb-cv">ML</span>
+          <span class="tbadge tb-pd">Vercel</span>
+        </div>
+        <a href="https://crop-advisory-one.vercel.app/" target="_blank" class="proj-link">
+          Live Demo ↗
+        </a>
+      </div>
+    </div>
+
+    <!-- ── PROJECT 2: NeuroStudy ── -->
+    <div class="proj-card reveal" style="transition-delay:0.1s">
+      <div class="proj-stripe stripe-blue"></div>
+
+      <div class="proj-preview">
+        <div class="proj-preview-mockup" style="background:linear-gradient(135deg,#090d18 0%,#0a0e1a 100%)">
+          <div class="mockup-browser" style="background:#0d1220;border-color:rgba(96,165,250,0.2)">
+            <div class="mockup-bar" style="background:#090d18;border-color:rgba(96,165,250,0.12)">
+              <div class="mockup-dot" style="background:#ff5f57"></div>
+              <div class="mockup-dot" style="background:#febc2e"></div>
+              <div class="mockup-dot" style="background:#28c840"></div>
+              <div class="mockup-url" style="background:rgba(96,165,250,0.08);color:rgba(96,165,250,0.5)">NeuroStudy · AI Study Platform</div>
+            </div>
+            <div class="mockup-content">
+              <div class="mockup-hero-text" style="color:#60a5fa">🧠 NeuroStudy</div>
+              <div class="mockup-sub">AI-powered personalised learning assistant</div>
+              <div class="mockup-form">
+                <div class="mockup-input" style="border-color:rgba(96,165,250,0.15);background:rgba(96,165,250,0.06)">📚 Upload your notes or syllabus...</div>
+                <div class="mockup-btn" style="background:rgba(96,165,250,0.15);border-color:rgba(96,165,250,0.3);color:#60a5fa">Generate Study Plan</div>
+              </div>
+              <div class="mockup-badge-row">
+                <span class="mockup-badge" style="background:rgba(96,165,250,0.1);color:#60a5fa;border:1px solid rgba(96,165,250,0.2)">Flashcards</span>
+                <span class="mockup-badge" style="background:rgba(167,139,250,0.1);color:#a78bfa;border:1px solid rgba(167,139,250,0.2)">Quiz mode</span>
+                <span class="mockup-badge mb-gold">Summaries</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-body">
+        <div class="proj-num">02 · OPEN SOURCE</div>
+        <div class="proj-icon">🧠</div>
+        <div class="proj-name">NeuroStudy — AI-Powered Study Assistant</div>
+        <p class="proj-desc">
+          A smart study platform that transforms raw notes and syllabi into structured learning materials. It generates flashcards, quizzes, and concise summaries — helping students study smarter and retain more in less time.
+        </p>
+        <ul class="feat-list">
+          <li>Upload notes or syllabi and get auto-generated study materials</li>
+          <li>AI-powered flashcard and quiz generation for active recall</li>
+          <li>Summarisation engine that condenses long content to key points</li>
+          <li>Personalised study scheduling based on upcoming exams</li>
+        </ul>
+      </div>
+
+      <div class="proj-footer">
+        <div class="tech-row">
+          <span class="tbadge tb-py">Python</span>
+          <span class="tbadge tb-re">React</span>
+          <span class="tbadge tb-ww">AI/NLP</span>
+          <span class="tbadge tb-js">JavaScript</span>
+        </div>
+        <a href="https://github.com/mahendrasagar2006-source" target="_blank" class="proj-link">
+          GitHub ↗
+        </a>
+      </div>
+    </div>
+
+    <!-- ── PROJECT 3: Food Loop ── -->
+    <div class="proj-card reveal" style="transition-delay:0.2s">
+      <div class="proj-stripe stripe-orange"></div>
+
+      <div class="proj-preview">
+        <div class="proj-preview-mockup" style="background:linear-gradient(135deg,#150800 0%,#1a0900 100%)">
+          <div class="mockup-browser" style="background:#1a0e00;border-color:rgba(251,146,60,0.2)">
+            <div class="mockup-bar" style="background:#150800;border-color:rgba(251,146,60,0.12)">
+              <div class="mockup-dot" style="background:#ff5f57"></div>
+              <div class="mockup-dot" style="background:#febc2e"></div>
+              <div class="mockup-dot" style="background:#28c840"></div>
+              <div class="mockup-url" style="background:rgba(251,146,60,0.08);color:rgba(251,146,60,0.5)">FoodLoop · Reduce Food Waste</div>
+            </div>
+            <div class="mockup-content">
+              <div class="mockup-hero-text" style="color:#fb923c">♻️ Food Loop</div>
+              <div class="mockup-sub">Connecting surplus food with those who need it</div>
+              <div class="mockup-form">
+                <div class="mockup-input" style="border-color:rgba(251,146,60,0.15);background:rgba(251,146,60,0.06)">🍱 List surplus food donation</div>
+                <div class="mockup-input" style="border-color:rgba(251,146,60,0.15);background:rgba(251,146,60,0.06)">📍 Hyderabad, Telangana</div>
+                <div class="mockup-btn" style="background:rgba(251,146,60,0.15);border-color:rgba(251,146,60,0.3);color:#fb923c">Find Nearby Donations</div>
+              </div>
+              <div class="mockup-badge-row">
+                <span class="mockup-badge" style="background:rgba(251,146,60,0.1);color:#fb923c;border:1px solid rgba(251,146,60,0.2)">NGO Connect</span>
+                <span class="mockup-badge mb-green">Zero Waste</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-body">
+        <div class="proj-num">03 · HACKATHON PROJECT</div>
+        <div class="proj-icon">♻️</div>
+        <div class="proj-name">Food Loop — Surplus Food Redistribution</div>
+        <p class="proj-desc">
+          A community platform to tackle food waste by connecting restaurants, households, and events that have surplus food with nearby NGOs, shelters, and individuals in need — reducing waste while fighting hunger.
+        </p>
+        <ul class="feat-list">
+          <li>Surplus food listing and real-time location-based matching</li>
+          <li>NGO and volunteer onboarding for organised pickup logistics</li>
+          <li>Impact dashboard showing food saved and people served</li>
+          <li>Notification system to alert nearby recipients of available food</li>
+        </ul>
+        <div class="achievement-badge">
+          🏆 Presented at Ideathon 3.0 — GRIET CSI, First Year Category
+        </div>
+      </div>
+
+      <div class="proj-footer">
+        <div class="tech-row">
+          <span class="tbadge tb-js">JavaScript</span>
+          <span class="tbadge tb-re">React</span>
+          <span class="tbadge tb-pd">Node.js</span>
+          <span class="tbadge tb-cv">Maps API</span>
+        </div>
+        <span class="proj-link-ghost">In Development</span>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -909,13 +1111,11 @@ footer{
         <span class="r-contact">📸 <a href="https://www.instagram.com/mana_raithu_nestham2025/" target="_blank">@mana_raithu_nestham2025</a></span>
       </div>
 
-      <!-- Profile -->
       <div class="r-sec">
         <div class="r-sec-head">Profile</div>
-        <p class="r-profile">Second-year Artificial Intelligence and Machine Learning student with strong interest in problem solving and software development. Actively practicing Data Structures and Algorithms while exploring web development and system design. Also a content creator sharing agricultural knowledge with farming communities in Telangana.</p>
+        <p class="r-profile">Second-year Artificial Intelligence and Machine Learning student with strong interest in problem solving and software development. Actively practicing Data Structures and Algorithms while exploring web development and system design. Built smart farming tools including the Mana Raithu Nestam crop advisory platform. Also a content creator sharing agricultural knowledge with farming communities in Telangana.</p>
       </div>
 
-      <!-- Education -->
       <div class="r-sec">
         <div class="r-sec-head">Education</div>
         <div class="r-edu-item">
@@ -944,7 +1144,15 @@ footer{
         </div>
       </div>
 
-      <!-- Skills -->
+      <div class="r-sec">
+        <div class="r-sec-head">Projects</div>
+        <ul class="r-achieve-list">
+          <li><strong>Mana Raithu Nestam</strong> — AI-powered smart crop advisory platform. Recommends crops based on temperature, previous crop, and soil data. Live at crop-advisory-one.vercel.app</li>
+          <li><strong>NeuroStudy</strong> — AI study assistant that generates flashcards, quizzes and summaries from uploaded notes. (GitHub)</li>
+          <li><strong>Food Loop</strong> — Surplus food redistribution platform connecting donors with NGOs and individuals in need. (In development)</li>
+        </ul>
+      </div>
+
       <div class="r-sec">
         <div class="r-sec-head">Skills</div>
         <div class="r-skills-grid">
@@ -975,7 +1183,6 @@ footer{
         </div>
       </div>
 
-      <!-- Achievements -->
       <div class="r-sec">
         <div class="r-sec-head">Achievements &amp; Activities</div>
         <ul class="r-achieve-list">
