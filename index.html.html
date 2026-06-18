@@ -33,21 +33,16 @@ body{
   line-height:1.6;
   overflow-x:hidden;
 }
-
-/* GRAIN OVERLAY */
 body::after{
   content:'';
   position:fixed;inset:0;
   background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
   pointer-events:none;z-index:0;opacity:0.5;
 }
-
-/* ── NAV ── */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:200;
   display:flex;align-items:center;justify-content:space-between;
-  padding:0 5vw;
-  height:64px;
+  padding:0 5vw;height:64px;
   background:rgba(5,8,15,0.75);
   backdrop-filter:blur(24px);
   border-bottom:1px solid var(--border);
@@ -76,8 +71,6 @@ nav{
   transition:all 0.2s !important;
 }
 .nav-resume:hover{background:#e8a020 !important;transform:translateY(-1px);box-shadow:0 6px 20px rgba(245,200,66,0.3) !important}
-
-/* ── HERO ── */
 #hero{
   min-height:100vh;display:flex;flex-direction:column;
   justify-content:center;padding:8rem 5vw 5rem;
@@ -133,8 +126,7 @@ nav{
 }
 .hero-role-tag{
   font-family:var(--mono);font-size:0.78rem;font-weight:500;
-  padding:0.35rem 0.9rem;border-radius:100px;
-  border:1px solid;
+  padding:0.35rem 0.9rem;border-radius:100px;border:1px solid;
 }
 .rt-ai{background:rgba(167,139,250,0.08);border-color:rgba(167,139,250,0.25);color:var(--purple)}
 .rt-dev{background:rgba(96,165,250,0.08);border-color:rgba(96,165,250,0.25);color:var(--blue)}
@@ -180,8 +172,6 @@ nav{
 }
 @keyframes slide{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
-
-/* ── SECTIONS COMMON ── */
 section{padding:6rem 5vw;position:relative;z-index:1}
 .sec-tag{
   font-family:var(--mono);font-size:0.72rem;font-weight:500;
@@ -195,8 +185,6 @@ section{padding:6rem 5vw;position:relative;z-index:1}
   letter-spacing:-0.025em;margin-bottom:1rem;
 }
 .full-divider{height:1px;background:var(--border);margin:0}
-
-/* ── ABOUT ── */
 #about{display:grid;grid-template-columns:1.1fr 0.9fr;gap:5rem;align-items:start}
 .about-text{color:var(--muted2);font-size:1rem;line-height:1.9;margin-bottom:1.25rem}
 .about-text strong{color:var(--text);font-weight:600}
@@ -207,7 +195,6 @@ section{padding:6rem 5vw;position:relative;z-index:1}
 }
 .stat-val{font-family:'Clash Display',sans-serif;font-size:2.2rem;font-weight:700;color:var(--gold);line-height:1}
 .stat-lbl{font-size:0.75rem;color:var(--muted);margin-top:0.3rem;letter-spacing:0.04em;text-transform:uppercase}
-.skills-panel{}
 .skills-head{
   font-family:'Clash Display',sans-serif;font-size:0.82rem;font-weight:600;
   color:var(--muted2);letter-spacing:0.08em;text-transform:uppercase;
@@ -227,8 +214,6 @@ section{padding:6rem 5vw;position:relative;z-index:1}
   transition:all 0.2s;
 }
 .tag:hover{border-color:rgba(245,200,66,0.4);color:var(--gold)}
-
-/* ── EDUCATION ── */
 #education{background:var(--surface)}
 .timeline{position:relative;max-width:700px;padding-left:2rem}
 .timeline::before{
@@ -254,8 +239,6 @@ section{padding:6rem 5vw;position:relative;z-index:1}
   color:var(--gold);background:rgba(245,200,66,0.08);
   border:1px solid rgba(245,200,66,0.2);padding:0.2rem 0.6rem;border-radius:5px;
 }
-
-/* ── PROJECTS ── */
 #projects{background:var(--bg)}
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.5rem;margin-top:3rem}
 .proj-card{
@@ -287,7 +270,7 @@ section{padding:6rem 5vw;position:relative;z-index:1}
   font-size:0.82rem;color:var(--muted2);
   padding:0.25rem 0 0.25rem 1rem;position:relative;line-height:1.55;
 }
-.feat-list li::before{content:'›';position:absolute;left:0;color:var(--gold);font-weight:700}
+.feat-list li::before{content:'\203A';position:absolute;left:0;color:var(--gold);font-weight:700}
 .achievement-badge{
   display:inline-flex;align-items:center;gap:0.4rem;
   background:rgba(245,200,66,0.07);border:1px solid rgba(245,200,66,0.18);
@@ -324,224 +307,6 @@ section{padding:6rem 5vw;position:relative;z-index:1}
   font-family:'Clash Display',sans-serif;font-size:0.75rem;font-weight:600;
   border:1px solid var(--border);border-radius:6px;letter-spacing:0.03em;cursor:default;
 }
-
-/* ── CODING PROFILES ── */
-#coding{background:var(--surface)}
-.coding-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.25rem;margin-top:3rem}
-.coding-card{
-  background:var(--card);border:1px solid var(--border);border-radius:14px;
-  padding:1.5rem;transition:all 0.3s;
-  display:flex;flex-direction:column;gap:0.75rem;
-  text-decoration:none;position:relative;overflow:hidden;
-}
-.coding-card::after{
-  content:'';position:absolute;top:0;left:0;right:0;height:2px;
-  opacity:0;transition:opacity 0.3s;
-}
-.cc-lc::after{background:linear-gradient(90deg,#f89f1b,#ffc01e)}
-.cc-hr::after{background:linear-gradient(90deg,#00ea64,#1ba94c)}
-.cc-gh::after{background:linear-gradient(90deg,#e8eaea,#6e7681)}
-.cc-cf::after{background:linear-gradient(90deg,#1f8acb,#4fc3f7)}
-.cc-cc::after{background:linear-gradient(90deg,#5b4638,#f7c948)}
-.cc-gfg::after{background:linear-gradient(90deg,#2f8d46,#4caf50)}
-.cc-insta::after{background:linear-gradient(90deg,#f09433,#dc2743,#bc1888)}
-.coding-card:hover{border-color:rgba(245,200,66,0.2);transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,0.4)}
-.coding-card:hover::after{opacity:1}
-.coding-platform-row{display:flex;align-items:center;gap:0.75rem}
-.coding-platform-icon{
-  width:40px;height:40px;border-radius:10px;border:1px solid var(--border);
-  display:flex;align-items:center;justify-content:center;font-size:1.25rem;background:var(--card2);
-}
-.coding-platform-name{font-family:'Clash Display',sans-serif;font-size:0.95rem;font-weight:700;color:var(--text)}
-.coding-handle{font-family:var(--mono);font-size:0.75rem;color:var(--muted);margin-top:-0.1rem}
-.coding-stat{font-size:0.82rem;color:var(--muted2);line-height:1.5}
-.coding-stat strong{color:var(--text);font-weight:600}
-.coding-arrow{font-size:0.75rem;color:var(--muted);margin-top:auto;font-family:var(--mono)}
-
-/* ── CONTACT ── */
-#contact{
-  text-align:center;padding:8rem 5vw;
-  position:relative;overflow:hidden;
-}
-.contact-bg-ring{
-  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-  width:600px;height:600px;border-radius:50%;
-  border:1px solid rgba(245,200,66,0.06);pointer-events:none;
-}
-.contact-bg-ring::before{
-  content:'';position:absolute;inset:80px;border-radius:50%;
-  border:1px solid rgba(245,200,66,0.04);
-}
-.contact-tag{display:flex;justify-content:center}
-.contact-title{
-  font-family:'Clash Display',sans-serif;font-size:clamp(2.5rem,8vw,7rem);
-  font-weight:700;line-height:0.95;letter-spacing:-0.035em;margin-bottom:1.5rem;
-}
-.contact-title span{
-  background:linear-gradient(135deg,var(--gold) 0%,#ff9f43 100%);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-}
-.contact-sub{color:var(--muted2);max-width:440px;margin:0 auto 2.5rem;font-size:0.97rem;line-height:1.85}
-.contact-email-link{
-  display:inline-block;font-family:'Clash Display',sans-serif;
-  font-size:1.15rem;font-weight:700;color:var(--gold);
-  text-decoration:none;border-bottom:1px solid rgba(245,200,66,0.3);
-  padding-bottom:2px;transition:border-color 0.2s;
-}
-.contact-email-link:hover{border-color:var(--gold)}
-.socials{display:flex;justify-content:center;gap:0.75rem;margin-top:2.5rem;flex-wrap:wrap}
-.social-pill{
-  display:inline-flex;align-items:center;gap:0.5rem;
-  padding:0.65rem 1.3rem;background:var(--card);
-  border:1px solid var(--border);border-radius:8px;
-  color:var(--muted2);text-decoration:none;font-size:0.83rem;font-weight:500;
-  transition:all 0.2s;font-family:'Clash Display',sans-serif;font-weight:600;letter-spacing:0.02em;
-}
-.social-pill:hover{border-color:rgba(245,200,66,0.35);color:var(--gold)}
-.social-pill.insta-pill:hover{border-color:rgba(225,48,108,0.35);color:#e1306c}
-
-/* ── FOOTER ── */
-footer{
-  border-top:1px solid var(--border);padding:1.75rem 5vw;
-  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;
-  font-size:0.78rem;color:var(--muted);
-}
-.footer-logo{font-family:'Clash Display',sans-serif;font-weight:700;font-size:0.95rem;color:var(--gold)}
-
-/* ══════════════════════════════════
-   RESUME MODAL
-══════════════════════════════════ */
-.resume-overlay{
-  position:fixed;inset:0;z-index:999;
-  background:rgba(2,4,10,0.88);
-  backdrop-filter:blur(24px);
-  display:flex;align-items:center;justify-content:center;
-  padding:1.5rem;
-  opacity:0;visibility:hidden;
-  transition:opacity 0.3s ease,visibility 0.3s ease;
-}
-.resume-overlay.open{opacity:1;visibility:visible}
-.resume-modal{
-  background:var(--card);
-  border:1px solid rgba(245,200,66,0.18);
-  border-radius:20px;
-  width:100%;max-width:800px;max-height:92vh;
-  overflow:hidden;display:flex;flex-direction:column;
-  transform:translateY(30px) scale(0.97);
-  transition:transform 0.35s cubic-bezier(0.23,1,0.32,1);
-  box-shadow:0 40px 120px rgba(0,0,0,0.8),0 0 0 1px rgba(245,200,66,0.06);
-}
-.resume-overlay.open .resume-modal{transform:none}
-.modal-head{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:1.1rem 1.75rem;border-bottom:1px solid var(--border);flex-shrink:0;
-}
-.modal-head-title{
-  font-family:'Clash Display',sans-serif;font-weight:700;font-size:0.95rem;color:var(--text);
-  display:flex;align-items:center;gap:0.6rem;
-}
-.modal-head-title .live-dot{
-  width:7px;height:7px;background:var(--gold);border-radius:50%;
-  animation:ring 2s infinite;
-}
-.modal-close{
-  width:32px;height:32px;border-radius:8px;border:1px solid var(--border);
-  background:rgba(255,255,255,0.04);color:var(--muted);
-  display:flex;align-items:center;justify-content:center;
-  cursor:pointer;font-size:1rem;transition:all 0.2s;
-}
-.modal-close:hover{background:rgba(255,255,255,0.1);color:var(--text)}
-.modal-body{
-  overflow-y:auto;padding:2.25rem 2.75rem;flex:1;
-  scrollbar-width:thin;scrollbar-color:rgba(245,200,66,0.25) transparent;
-}
-.modal-body::-webkit-scrollbar{width:4px}
-.modal-body::-webkit-scrollbar-thumb{background:rgba(245,200,66,0.2);border-radius:3px}
-
-.r-name{
-  font-family:'Clash Display',sans-serif;font-size:2rem;font-weight:700;
-  color:var(--text);letter-spacing:-0.02em;text-align:center;margin-bottom:0.65rem;
-}
-.r-contacts{
-  display:flex;flex-wrap:wrap;gap:0.5rem 1.25rem;
-  justify-content:center;margin-bottom:2rem;
-}
-.r-contact{
-  display:flex;align-items:center;gap:0.4rem;
-  font-size:0.8rem;color:var(--muted2);font-family:var(--mono);
-}
-.r-contact a{color:var(--gold);text-decoration:none}
-.r-contact a:hover{text-decoration:underline}
-.r-sec{margin-bottom:1.75rem}
-.r-sec-head{
-  font-family:var(--mono);font-size:0.68rem;font-weight:600;
-  color:var(--gold);letter-spacing:0.2em;text-transform:uppercase;
-  padding-bottom:0.45rem;border-bottom:1px solid rgba(245,200,66,0.15);
-  margin-bottom:1rem;
-}
-.r-profile{font-size:0.88rem;color:var(--muted2);line-height:1.8}
-.r-edu-item{margin-bottom:1.1rem}
-.r-edu-row{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.2rem}
-.r-edu-school{font-family:'Clash Display',sans-serif;font-weight:600;font-size:0.92rem;color:var(--text)}
-.r-edu-date{font-family:var(--mono);font-size:0.75rem;color:var(--gold);white-space:nowrap}
-.r-edu-degree{font-size:0.83rem;color:var(--muted2);font-style:italic;margin-top:0.1rem}
-.r-edu-score{
-  display:inline-flex;margin-top:0.3rem;
-  font-family:var(--mono);font-size:0.73rem;font-weight:600;
-  color:var(--gold);background:rgba(245,200,66,0.08);
-  border:1px solid rgba(245,200,66,0.18);padding:0.15rem 0.5rem;border-radius:4px;
-}
-.r-skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.9rem}
-.r-skill-group-label{font-size:0.77rem;font-weight:600;color:var(--text);margin-bottom:0.4rem}
-.r-chips{display:flex;flex-wrap:wrap;gap:0.3rem}
-.r-chip{
-  padding:0.2rem 0.6rem;background:rgba(255,255,255,0.04);
-  border:1px solid var(--border);border-radius:4px;
-  font-size:0.73rem;color:var(--muted2);font-family:var(--mono);
-}
-.r-achieve-list{list-style:none}
-.r-achieve-list li{
-  font-size:0.84rem;color:var(--muted2);
-  padding:0.3rem 0 0.3rem 1.1rem;position:relative;line-height:1.6;
-  border-bottom:1px solid rgba(255,255,255,0.03);
-}
-.r-achieve-list li:last-child{border-bottom:none}
-.r-achieve-list li::before{content:'▸';position:absolute;left:0;color:var(--gold);font-size:0.6rem;top:0.5rem}
-.r-achieve-list li strong{color:var(--text);font-weight:600}
-.modal-foot{
-  padding:0.9rem 1.75rem;border-top:1px solid var(--border);
-  display:flex;align-items:center;justify-content:space-between;
-  flex-shrink:0;flex-wrap:wrap;gap:0.75rem;
-}
-.modal-foot-note{font-size:0.73rem;color:var(--muted);font-family:var(--mono)}
-.modal-request-btn{
-  display:inline-flex;align-items:center;gap:0.45rem;
-  padding:0.5rem 1.2rem;background:var(--gold);color:#05080f;
-  font-family:'Clash Display',sans-serif;font-size:0.78rem;font-weight:700;
-  border-radius:7px;border:none;cursor:pointer;
-  transition:all 0.2s;text-decoration:none;letter-spacing:0.03em;
-}
-.modal-request-btn:hover{background:#e8a020;transform:translateY(-1px);box-shadow:0 6px 18px rgba(245,200,66,0.3)}
-
-/* ── REVEAL ── */
-.reveal{opacity:0;transform:translateY(22px);transition:opacity 0.6s ease,transform 0.6s ease}
-.reveal.visible{opacity:1;transform:none}
-
-/* ── RESPONSIVE ── */
-@media(max-width:900px){
-  #about{grid-template-columns:1fr;gap:3rem}
-  .stat-grid{grid-template-columns:repeat(3,1fr)}
-}
-@media(max-width:640px){
-  nav{padding:0 4vw}
-  .nav-links li:not(:last-child):not(:nth-last-child(2)){display:none}
-  .projects-grid,.coding-grid{grid-template-columns:1fr}
-  .stat-grid{grid-template-columns:repeat(2,1fr)}
-  .modal-body{padding:1.5rem}
-  .r-skills-grid{grid-template-columns:1fr}
-}
-
-/* ── PROJECT PREVIEW IMAGE ── */
 .proj-preview{
   width:100%;height:180px;overflow:hidden;
   border-bottom:1px solid var(--border);
@@ -613,7 +378,6 @@ footer{
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a class="nav-logo" href="#hero">M.U</a>
   <ul class="nav-links">
@@ -626,12 +390,10 @@ footer{
   </ul>
 </nav>
 
-<!-- HERO -->
 <section id="hero">
   <div class="hero-blob1"></div>
   <div class="hero-blob2"></div>
   <div class="hero-grid-lines"></div>
-
   <div class="hero-eyebrow">
     <span class="pulse-ring"></span>
     Available for Internships &amp; Projects
@@ -665,7 +427,6 @@ footer{
 
 <div class="full-divider"></div>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="reveal">
     <div class="sec-tag">About Me</div>
@@ -691,7 +452,6 @@ footer{
       </div>
     </div>
   </div>
-
   <div class="reveal" style="transition-delay:0.15s">
     <div class="skills-head">Technical Proficiency</div>
     <div class="skill-row">
@@ -729,7 +489,6 @@ footer{
 
 <div class="full-divider"></div>
 
-<!-- EDUCATION -->
 <section id="education">
   <div class="sec-tag reveal">Education</div>
   <h2 class="sec-title reveal">My Academic Journey.</h2>
@@ -761,23 +520,16 @@ footer{
 
 <div class="full-divider"></div>
 
-<!-- ═══════════════════════════════════
-     PROJECTS SECTION  (NEW)
-═══════════════════════════════════ -->
 <section id="projects">
   <div class="sec-tag reveal">Projects</div>
   <h2 class="sec-title reveal">Things I've Built.</h2>
   <p class="reveal" style="color:var(--muted2);max-width:540px;font-size:0.95rem;line-height:1.8;margin-top:0.5rem">
     Real-world applications where code meets purpose — from AI-powered farming tools to intelligent study systems.
   </p>
-
   <div class="projects-grid">
 
-    <!-- ── PROJECT 1: Smart Crop Advisory ── -->
     <div class="proj-card reveal">
       <div class="proj-stripe stripe-green"></div>
-
-      <!-- Visual mockup preview -->
       <div class="proj-preview">
         <div class="proj-preview-mockup">
           <div class="mockup-browser">
@@ -791,9 +543,9 @@ footer{
               <div class="mockup-hero-text">🌾 Mana Raithu Nestam</div>
               <div class="mockup-sub">Smart Crop Advisory Platform for Telangana Farmers</div>
               <div class="mockup-form">
-                <div class="mockup-input">🌡️  Temperature: 28°C</div>
-                <div class="mockup-input">🌧️  Previous crop: Rice</div>
-                <div class="mockup-input">🌱  Soil type: Black cotton</div>
+                <div class="mockup-input">🌡️ Temperature: 28°C</div>
+                <div class="mockup-input">🌧️ Previous crop: Rice</div>
+                <div class="mockup-input">🌱 Soil type: Black cotton</div>
                 <div class="mockup-btn">Get Crop Recommendation →</div>
               </div>
               <div class="mockup-badge-row">
@@ -805,7 +557,6 @@ footer{
           </div>
         </div>
       </div>
-
       <div class="proj-body">
         <div class="proj-num">01 · FEATURED PROJECT</div>
         <div class="proj-icon">🌾</div>
@@ -824,7 +575,6 @@ footer{
           🏆 Presented at Ideathon 3.0 — GRIET CSI Student Branch
         </div>
       </div>
-
       <div class="proj-footer">
         <div class="tech-row">
           <span class="tbadge tb-js">JavaScript</span>
@@ -833,16 +583,12 @@ footer{
           <span class="tbadge tb-cv">ML</span>
           <span class="tbadge tb-pd">Vercel</span>
         </div>
-        <a href="https://crop-advisory-one.vercel.app/" target="_blank" class="proj-link">
-          Live Demo ↗
-        </a>
+        <a href="https://crop-advisory-one.vercel.app/" target="_blank" class="proj-link">Live Demo ↗</a>
       </div>
     </div>
 
-    <!-- ── PROJECT 2: NeuroStudy ── -->
     <div class="proj-card reveal" style="transition-delay:0.1s">
       <div class="proj-stripe stripe-blue"></div>
-
       <div class="proj-preview">
         <div class="proj-preview-mockup" style="background:linear-gradient(135deg,#090d18 0%,#0a0e1a 100%)">
           <div class="mockup-browser" style="background:#0d1220;border-color:rgba(96,165,250,0.2)">
@@ -868,7 +614,6 @@ footer{
           </div>
         </div>
       </div>
-
       <div class="proj-body">
         <div class="proj-num">02 · OPEN SOURCE</div>
         <div class="proj-icon">🧠</div>
@@ -883,7 +628,6 @@ footer{
           <li>Personalised study scheduling based on upcoming exams</li>
         </ul>
       </div>
-
       <div class="proj-footer">
         <div class="tech-row">
           <span class="tbadge tb-py">Python</span>
@@ -891,16 +635,12 @@ footer{
           <span class="tbadge tb-ww">AI/NLP</span>
           <span class="tbadge tb-js">JavaScript</span>
         </div>
-        <a href="https://github.com/mahendrasagar2006-source" target="_blank" class="proj-link">
-          GitHub ↗
-        </a>
+        <a href="https://synapset-s6af.vercel.app/stress-buster" target="_blank" class="proj-link">Live Demo ↗</a>
       </div>
     </div>
 
-    <!-- ── PROJECT 3: Food Loop ── -->
     <div class="proj-card reveal" style="transition-delay:0.2s">
       <div class="proj-stripe stripe-orange"></div>
-
       <div class="proj-preview">
         <div class="proj-preview-mockup" style="background:linear-gradient(135deg,#150800 0%,#1a0900 100%)">
           <div class="mockup-browser" style="background:#1a0e00;border-color:rgba(251,146,60,0.2)">
@@ -926,7 +666,6 @@ footer{
           </div>
         </div>
       </div>
-
       <div class="proj-body">
         <div class="proj-num">03 · HACKATHON PROJECT</div>
         <div class="proj-icon">♻️</div>
@@ -944,7 +683,6 @@ footer{
           🏆 Presented at Ideathon 3.0 — GRIET CSI, First Year Category
         </div>
       </div>
-
       <div class="proj-footer">
         <div class="tech-row">
           <span class="tbadge tb-js">JavaScript</span>
@@ -961,14 +699,12 @@ footer{
 
 <div class="full-divider"></div>
 
-<!-- CODING PROFILES -->
 <section id="coding">
   <div class="sec-tag reveal">Competitive Programming</div>
   <h2 class="sec-title reveal">Coding Profiles.</h2>
   <p class="reveal" style="color:var(--muted2);max-width:520px;font-size:0.95rem;line-height:1.8;margin-top:0.5rem">
     Actively practicing DSA and competitive programming across these platforms to sharpen problem-solving skills daily.
   </p>
-
   <div class="coding-grid">
 
     <a href="https://leetcode.com/mahendrasagar2006" target="_blank" class="coding-card cc-lc reveal">
@@ -1049,7 +785,6 @@ footer{
 
 <div class="full-divider"></div>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="contact-bg-ring"></div>
   <div class="contact-tag"><div class="sec-tag reveal">Contact</div></div>
@@ -1081,17 +816,13 @@ footer{
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <span>© 2026 Mahendra U · All rights reserved.</span>
   <span class="footer-logo">M.U</span>
 </footer>
 
-
-<!-- ═══════════ RESUME MODAL ═══════════ -->
 <div class="resume-overlay" id="resumeOverlay" role="dialog" aria-modal="true">
   <div class="resume-modal">
-
     <div class="modal-head">
       <div class="modal-head-title">
         <span class="live-dot"></span>
@@ -1099,9 +830,7 @@ footer{
       </div>
       <button class="modal-close" id="resumeClose">✕</button>
     </div>
-
     <div class="modal-body">
-
       <div class="r-name">U Mahendra</div>
       <div class="r-contacts">
         <span class="r-contact">✉ <a href="mailto:mahendrasagar2006@gmail.com">mahendrasagar2006@gmail.com</a></span>
@@ -1110,12 +839,10 @@ footer{
         <span class="r-contact">⌨ <a href="https://github.com/mahendrasagar2006-source" target="_blank">GitHub</a></span>
         <span class="r-contact">📸 <a href="https://www.instagram.com/mana_raithu_nestham2025/" target="_blank">@mana_raithu_nestham2025</a></span>
       </div>
-
       <div class="r-sec">
         <div class="r-sec-head">Profile</div>
         <p class="r-profile">Second-year Artificial Intelligence and Machine Learning student with strong interest in problem solving and software development. Actively practicing Data Structures and Algorithms while exploring web development and system design. Built smart farming tools including the Mana Raithu Nestam crop advisory platform. Also a content creator sharing agricultural knowledge with farming communities in Telangana.</p>
       </div>
-
       <div class="r-sec">
         <div class="r-sec-head">Education</div>
         <div class="r-edu-item">
@@ -1143,16 +870,14 @@ footer{
           <div class="r-edu-score">CGPA: 9.5</div>
         </div>
       </div>
-
       <div class="r-sec">
         <div class="r-sec-head">Projects</div>
         <ul class="r-achieve-list">
           <li><strong>Mana Raithu Nestam</strong> — AI-powered smart crop advisory platform. Recommends crops based on temperature, previous crop, and soil data. Live at crop-advisory-one.vercel.app</li>
-          <li><strong>NeuroStudy</strong> — AI study assistant that generates flashcards, quizzes and summaries from uploaded notes. (GitHub)</li>
+          <li><strong>NeuroStudy</strong> — AI study assistant that generates flashcards, quizzes and summaries from uploaded notes. (Live Demo)</li>
           <li><strong>Food Loop</strong> — Surplus food redistribution platform connecting donors with NGOs and individuals in need. (In development)</li>
         </ul>
       </div>
-
       <div class="r-sec">
         <div class="r-sec-head">Skills</div>
         <div class="r-skills-grid">
@@ -1182,7 +907,6 @@ footer{
           </div>
         </div>
       </div>
-
       <div class="r-sec">
         <div class="r-sec-head">Achievements &amp; Activities</div>
         <ul class="r-achieve-list">
@@ -1194,9 +918,7 @@ footer{
           <li>Content Creator — <strong>Mana Raithu Nestham</strong> (Instagram), sharing agricultural knowledge in Telugu for Telangana farmers.</li>
         </ul>
       </div>
-
     </div>
-
     <div class="modal-foot">
       <span class="modal-foot-note">// Last updated · 2026</span>
       <a href="mailto:mahendrasagar2006@gmail.com?subject=Resume%20Request&body=Hi%20Mahendra%2C%20I%20would%20like%20to%20request%20your%20resume." class="modal-request-btn">
@@ -1204,26 +926,213 @@ footer{
         Request PDF
       </a>
     </div>
-
   </div>
 </div>
 
+<style>
+.contact-bg-ring{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:600px;height:600px;border-radius:50%;
+  border:1px solid rgba(245,200,66,0.06);pointer-events:none;
+}
+.contact-bg-ring::before{
+  content:'';position:absolute;inset:80px;border-radius:50%;
+  border:1px solid rgba(245,200,66,0.04);
+}
+.contact-tag{display:flex;justify-content:center}
+.contact-title{
+  font-family:'Clash Display',sans-serif;font-size:clamp(2.5rem,8vw,7rem);
+  font-weight:700;line-height:0.95;letter-spacing:-0.035em;margin-bottom:1.5rem;
+}
+.contact-title span{
+  background:linear-gradient(135deg,var(--gold) 0%,#ff9f43 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.contact-sub{color:var(--muted2);max-width:440px;margin:0 auto 2.5rem;font-size:0.97rem;line-height:1.85}
+.contact-email-link{
+  display:inline-block;font-family:'Clash Display',sans-serif;
+  font-size:1.15rem;font-weight:700;color:var(--gold);
+  text-decoration:none;border-bottom:1px solid rgba(245,200,66,0.3);
+  padding-bottom:2px;transition:border-color 0.2s;
+}
+.contact-email-link:hover{border-color:var(--gold)}
+.socials{display:flex;justify-content:center;gap:0.75rem;margin-top:2.5rem;flex-wrap:wrap}
+.social-pill{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  padding:0.65rem 1.3rem;background:var(--card);
+  border:1px solid var(--border);border-radius:8px;
+  color:var(--muted2);text-decoration:none;font-size:0.83rem;font-weight:500;
+  transition:all 0.2s;font-family:'Clash Display',sans-serif;font-weight:600;letter-spacing:0.02em;
+}
+.social-pill:hover{border-color:rgba(245,200,66,0.35);color:var(--gold)}
+.social-pill.insta-pill:hover{border-color:rgba(225,48,108,0.35);color:#e1306c}
+footer{
+  border-top:1px solid var(--border);padding:1.75rem 5vw;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;
+  font-size:0.78rem;color:var(--muted);
+}
+.footer-logo{font-family:'Clash Display',sans-serif;font-weight:700;font-size:0.95rem;color:var(--gold)}
+.resume-overlay{
+  position:fixed;inset:0;z-index:999;
+  background:rgba(2,4,10,0.88);
+  backdrop-filter:blur(24px);
+  display:flex;align-items:center;justify-content:center;
+  padding:1.5rem;
+  opacity:0;visibility:hidden;
+  transition:opacity 0.3s ease,visibility 0.3s ease;
+}
+.resume-overlay.open{opacity:1;visibility:visible}
+.resume-modal{
+  background:var(--card);
+  border:1px solid rgba(245,200,66,0.18);
+  border-radius:20px;
+  width:100%;max-width:800px;max-height:92vh;
+  overflow:hidden;display:flex;flex-direction:column;
+  transform:translateY(30px) scale(0.97);
+  transition:transform 0.35s cubic-bezier(0.23,1,0.32,1);
+  box-shadow:0 40px 120px rgba(0,0,0,0.8),0 0 0 1px rgba(245,200,66,0.06);
+}
+.resume-overlay.open .resume-modal{transform:none}
+.modal-head{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.1rem 1.75rem;border-bottom:1px solid var(--border);flex-shrink:0;
+}
+.modal-head-title{
+  font-family:'Clash Display',sans-serif;font-weight:700;font-size:0.95rem;color:var(--text);
+  display:flex;align-items:center;gap:0.6rem;
+}
+.modal-head-title .live-dot{
+  width:7px;height:7px;background:var(--gold);border-radius:50%;
+  animation:ring 2s infinite;
+}
+.modal-close{
+  width:32px;height:32px;border-radius:8px;border:1px solid var(--border);
+  background:rgba(255,255,255,0.04);color:var(--muted);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;font-size:1rem;transition:all 0.2s;
+}
+.modal-close:hover{background:rgba(255,255,255,0.1);color:var(--text)}
+.modal-body{
+  overflow-y:auto;padding:2.25rem 2.75rem;flex:1;
+  scrollbar-width:thin;scrollbar-color:rgba(245,200,66,0.25) transparent;
+}
+.modal-body::-webkit-scrollbar{width:4px}
+.modal-body::-webkit-scrollbar-thumb{background:rgba(245,200,66,0.2);border-radius:3px}
+.r-name{
+  font-family:'Clash Display',sans-serif;font-size:2rem;font-weight:700;
+  color:var(--text);letter-spacing:-0.02em;text-align:center;margin-bottom:0.65rem;
+}
+.r-contacts{display:flex;flex-wrap:wrap;gap:0.5rem 1.25rem;justify-content:center;margin-bottom:2rem}
+.r-contact{display:flex;align-items:center;gap:0.4rem;font-size:0.8rem;color:var(--muted2);font-family:var(--mono)}
+.r-contact a{color:var(--gold);text-decoration:none}
+.r-contact a:hover{text-decoration:underline}
+.r-sec{margin-bottom:1.75rem}
+.r-sec-head{
+  font-family:var(--mono);font-size:0.68rem;font-weight:600;
+  color:var(--gold);letter-spacing:0.2em;text-transform:uppercase;
+  padding-bottom:0.45rem;border-bottom:1px solid rgba(245,200,66,0.15);
+  margin-bottom:1rem;
+}
+.r-profile{font-size:0.88rem;color:var(--muted2);line-height:1.8}
+.r-edu-item{margin-bottom:1.1rem}
+.r-edu-row{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.2rem}
+.r-edu-school{font-family:'Clash Display',sans-serif;font-weight:600;font-size:0.92rem;color:var(--text)}
+.r-edu-date{font-family:var(--mono);font-size:0.75rem;color:var(--gold);white-space:nowrap}
+.r-edu-degree{font-size:0.83rem;color:var(--muted2);font-style:italic;margin-top:0.1rem}
+.r-edu-score{
+  display:inline-flex;margin-top:0.3rem;
+  font-family:var(--mono);font-size:0.73rem;font-weight:600;
+  color:var(--gold);background:rgba(245,200,66,0.08);
+  border:1px solid rgba(245,200,66,0.18);padding:0.15rem 0.5rem;border-radius:4px;
+}
+.r-skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.9rem}
+.r-skill-group-label{font-size:0.77rem;font-weight:600;color:var(--text);margin-bottom:0.4rem}
+.r-chips{display:flex;flex-wrap:wrap;gap:0.3rem}
+.r-chip{
+  padding:0.2rem 0.6rem;background:rgba(255,255,255,0.04);
+  border:1px solid var(--border);border-radius:4px;
+  font-size:0.73rem;color:var(--muted2);font-family:var(--mono);
+}
+.r-achieve-list{list-style:none}
+.r-achieve-list li{
+  font-size:0.84rem;color:var(--muted2);
+  padding:0.3rem 0 0.3rem 1.1rem;position:relative;line-height:1.6;
+  border-bottom:1px solid rgba(255,255,255,0.03);
+}
+.r-achieve-list li:last-child{border-bottom:none}
+.r-achieve-list li::before{content:'\25B8';position:absolute;left:0;color:var(--gold);font-size:0.6rem;top:0.5rem}
+.r-achieve-list li strong{color:var(--text);font-weight:600}
+.modal-foot{
+  padding:0.9rem 1.75rem;border-top:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;
+  flex-shrink:0;flex-wrap:wrap;gap:0.75rem;
+}
+.modal-foot-note{font-size:0.73rem;color:var(--muted);font-family:var(--mono)}
+.modal-request-btn{
+  display:inline-flex;align-items:center;gap:0.45rem;
+  padding:0.5rem 1.2rem;background:var(--gold);color:#05080f;
+  font-family:'Clash Display',sans-serif;font-size:0.78rem;font-weight:700;
+  border-radius:7px;border:none;cursor:pointer;
+  transition:all 0.2s;text-decoration:none;letter-spacing:0.03em;
+}
+.modal-request-btn:hover{background:#e8a020;transform:translateY(-1px);box-shadow:0 6px 18px rgba(245,200,66,0.3)}
+.coding-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.25rem;margin-top:3rem}
+.coding-card{
+  background:var(--card);border:1px solid var(--border);border-radius:14px;
+  padding:1.5rem;transition:all 0.3s;
+  display:flex;flex-direction:column;gap:0.75rem;
+  text-decoration:none;position:relative;overflow:hidden;
+}
+.coding-card::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  opacity:0;transition:opacity 0.3s;
+}
+.cc-lc::after{background:linear-gradient(90deg,#f89f1b,#ffc01e)}
+.cc-hr::after{background:linear-gradient(90deg,#00ea64,#1ba94c)}
+.cc-gh::after{background:linear-gradient(90deg,#e8eaea,#6e7681)}
+.cc-cf::after{background:linear-gradient(90deg,#1f8acb,#4fc3f7)}
+.cc-cc::after{background:linear-gradient(90deg,#5b4638,#f7c948)}
+.cc-gfg::after{background:linear-gradient(90deg,#2f8d46,#4caf50)}
+.cc-insta::after{background:linear-gradient(90deg,#f09433,#dc2743,#bc1888)}
+.coding-card:hover{border-color:rgba(245,200,66,0.2);transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,0.4)}
+.coding-card:hover::after{opacity:1}
+.coding-platform-row{display:flex;align-items:center;gap:0.75rem}
+.coding-platform-icon{
+  width:40px;height:40px;border-radius:10px;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;font-size:1.25rem;background:var(--card2);
+}
+.coding-platform-name{font-family:'Clash Display',sans-serif;font-size:0.95rem;font-weight:700;color:var(--text)}
+.coding-handle{font-family:var(--mono);font-size:0.75rem;color:var(--muted);margin-top:-0.1rem}
+.coding-stat{font-size:0.82rem;color:var(--muted2);line-height:1.5}
+.coding-stat strong{color:var(--text);font-weight:600}
+.coding-arrow{font-size:0.75rem;color:var(--muted);margin-top:auto;font-family:var(--mono)}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity 0.6s ease,transform 0.6s ease}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:900px){
+  #about{grid-template-columns:1fr;gap:3rem}
+  .stat-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:640px){
+  nav{padding:0 4vw}
+  .nav-links li:not(:last-child):not(:nth-last-child(2)){display:none}
+  .projects-grid,.coding-grid{grid-template-columns:1fr}
+  .stat-grid{grid-template-columns:repeat(2,1fr)}
+  .modal-body{padding:1.5rem}
+  .r-skills-grid{grid-template-columns:1fr}
+}
+</style>
+
 <script>
-// ── SCROLL REVEAL ──
 const revealEls = document.querySelectorAll('.reveal');
 const revealIO = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); revealIO.unobserve(e.target); } });
 }, { threshold: 0.1 });
 revealEls.forEach(el => revealIO.observe(el));
-
-// ── SKILL BARS ──
 const skillBars = document.querySelectorAll('.skill-bar');
 const barIO = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting){ e.target.style.width = e.target.dataset.w + '%'; barIO.unobserve(e.target); } });
 }, { threshold: 0.5 });
 skillBars.forEach(b => barIO.observe(b));
-
-// ── SMOOTH SCROLL ──
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   const isResumeTrigger = a.id && a.id.toLowerCase().includes('resume');
   if(isResumeTrigger) return;
@@ -1235,13 +1144,9 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     if(t) t.scrollIntoView({ behavior:'smooth', block:'start' });
   });
 });
-
-// ── RESUME MODAL ──
 const overlay = document.getElementById('resumeOverlay');
-
 function openResume(e){ e.preventDefault(); overlay.classList.add('open'); document.body.style.overflow='hidden'; }
 function closeResume(){ overlay.classList.remove('open'); document.body.style.overflow=''; }
-
 ['openResumeNav','openResumeHero','openResumeContact'].forEach(id => {
   const el = document.getElementById(id);
   if(el) el.addEventListener('click', openResume);
@@ -1250,5 +1155,6 @@ document.getElementById('resumeClose').addEventListener('click', closeResume);
 overlay.addEventListener('click', e => { if(e.target === overlay) closeResume(); });
 document.addEventListener('keydown', e => { if(e.key === 'Escape') closeResume(); });
 </script>
+
 </body>
 </html>
