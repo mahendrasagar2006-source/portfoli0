@@ -305,6 +305,9 @@ section{padding:6rem 5vw;position:relative;z-index:1}
   text-decoration:none;border-radius:6px;letter-spacing:0.03em;transition:all 0.2s;
 }
 .proj-link:hover{background:#e8a020;transform:translateY(-1px);box-shadow:0 5px 15px rgba(245,200,66,0.3)}
+.proj-links{display:flex;flex-wrap:wrap;gap:0.5rem;align-items:center}
+.proj-link-outline{display:inline-flex;align-items:center;gap:0.35rem;padding:0.45rem 1rem;background:transparent;color:var(--muted2);font-family:'Clash Display',sans-serif;font-size:0.75rem;font-weight:600;text-decoration:none;border:1px solid var(--border2);border-radius:6px;letter-spacing:0.03em;transition:all 0.2s}
+.proj-link-outline:hover{border-color:rgba(245,200,66,0.4);color:var(--gold);transform:translateY(-1px)}
 .proj-link-ghost{
   display:inline-flex;align-items:center;gap:0.35rem;
   padding:0.45rem 1rem;background:transparent;color:var(--muted);
@@ -554,7 +557,11 @@ section{padding:6rem 5vw;position:relative;z-index:1}
           <span class="tbadge tb-js">JavaScript</span>
           <span class="tbadge tb-pd">Vercel</span>
         </div>
-        <a href="https://mana-raithu-ml-19ct.vercel.app/" target="_blank" class="proj-link">Live Demo ↗</a>
+        <div class="proj-links">
+          <a href="https://github.com/mahendrasagar2006-source/mana_raithu_ml" target="_blank" rel="noopener" class="proj-link-outline">Source Code ↗</a>
+          <a href="https://docs.google.com/document/d/1iRFy2F_J1ioM4V5XVJHA6HCH2KUSg1qEgzDtioVUTIU/edit?tab=t.0" target="_blank" rel="noopener" class="proj-link-outline">Documentation ↗</a>
+          <a href="https://mana-raithu-ml-19ct.vercel.app/" target="_blank" rel="noopener" class="proj-link">Live Demo ↗</a>
+        </div>
       </div>
     </div>
     <!-- ===== END PROJECT 1 ===== -->
